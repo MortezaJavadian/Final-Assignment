@@ -12,4 +12,19 @@
 	
 	\maketitle
 	
+	\renewcommand{\contentsname }{ TABLE OF CONTENTS}
+	
+	\tableofcontents
+	\addtocontents{toc}{~\hfill  Page\par}
+	\let\LaTeXStandardTableOfContents\tableofcontents
+	
+	\renewcommand{\tableofcontents}
+	{
+		\begingroup
+		\renewcommand{\bfseries}{\relax}
+		\LaTeXStandardTableOfContents
+		\endgroup
+	}
+	
+	
 \end{document}
